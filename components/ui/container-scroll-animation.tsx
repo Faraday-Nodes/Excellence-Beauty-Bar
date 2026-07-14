@@ -91,11 +91,11 @@ export const Card = ({
         boxShadow:
           "0 0 #6b4f4400, 0 9px 20px #6b4f4426, 0 37px 37px #6b4f4421, 0 84px 50px #6b4f4413, 0 149px 60px #6b4f4405, 0 233px 65px #6b4f4402",
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#f3cfc9] p-2 md:p-6 bg-[#fdf1ec] rounded-[30px]"
+      className="max-w-5xl -mt-12 mx-auto w-full border-4 border-[#f3cfc9] p-2 md:p-3 bg-[#fdf1ec] rounded-[30px]"
     >
-      <div className="h-full w-full overflow-hidden rounded-2xl bg-[#fae6e0] md:rounded-2xl md:p-4">
-        {children}
-      </div>
+      {/* No fixed height: the frame hugs whatever image it wraps, so there
+          are no empty bars around it regardless of the image's aspect ratio. */}
+      <div className="w-full overflow-hidden rounded-2xl">{children}</div>
     </motion.div>
   );
 };

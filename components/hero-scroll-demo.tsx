@@ -39,11 +39,11 @@ export function HeroScrollDemo() {
         }
       >
         <Image
-          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2400&auto=format&fit=crop"
-          alt="A bright, calm beauty studio interior"
-          height={720}
-          width={1400}
-          className="mx-auto h-full rounded-2xl object-cover object-left-top"
+          src="/meet-the-owner.png"
+          alt="Meet the owner, Yariliz — a passionate waxer with five years of experience and three years running her own business, dedicated to making every client feel confident, comfortable and silky smooth."
+          height={375}
+          width={637}
+          className="block h-auto w-full rounded-2xl"
           draggable={false}
           priority
         />

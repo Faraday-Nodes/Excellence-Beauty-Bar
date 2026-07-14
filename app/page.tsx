@@ -98,34 +98,6 @@ export default function Home() {
           <PagePeelDemo />
         </section>
 
-        {/* Meet the owner */}
-        <section id="owner" className="px-6 py-24 md:py-32">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-display text-4xl font-semibold md:text-5xl">
-              Meet the{" "}
-              <span className="font-script bg-gradient-to-r from-[#d8a75b] to-[#7d4e22] bg-clip-text pr-3 text-5xl text-transparent md:text-7xl">
-                Owner
-              </span>
-            </h2>
-            <div className="mt-10 rounded-[28px] bg-[#fbd9dd]/60 p-8 shadow-[0_8px_30px_rgba(122,74,34,0.08)] md:p-12">
-              <p className="text-lg leading-relaxed text-[#6b4a30]">
-                Hi there! I&apos;m Yariliz, a passionate waxer with five years
-                of experience and three years of running my own business. The
-                beauty industry has always had my heart, thanks to the amazing
-                women in my family who inspired me to do what I love. My goal
-                is to make every client feel confident, comfortable, and, of
-                course, silky smooth! I bring good vibes, lots of smiles, and a
-                touch of warmth to every appointment because beauty should be
-                fun and empowering. Can&apos;t wait to welcome you into my
-                space!
-              </p>
-              <p className="font-script mt-6 text-4xl text-[#8a5a2b]">
-                Yariliz
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Salon hours */}
         <section id="hours" className="px-6 py-24 md:py-32">
           <h2 className="font-display text-center text-4xl font-semibold tracking-[0.08em] md:text-5xl">
