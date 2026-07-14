@@ -41,8 +41,8 @@ export function HeroScrollDemo() {
         <Image
           src="/meet-the-owner.png"
           alt="Meet the owner, Yariliz — a passionate waxer with five years of experience and three years running her own business, dedicated to making every client feel confident, comfortable and silky smooth."
-          height={375}
-          width={637}
+          height={962}
+          width={1635}
           className="block h-auto w-full rounded-2xl"
           draggable={false}
           priority
