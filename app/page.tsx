@@ -1,65 +1,220 @@
 import Image from "next/image";
+import { Sparkles, Heart, Clock } from "lucide-react";
+import { HeroScrollDemo } from "@/components/hero-scroll-demo";
+import { PagePeelDemo } from "@/components/ui/PagePeel";
+
+const BOOK_URL = "https://excellencebeautybarnj.as.me/schedule/9671e509";
+
+const services = [
+  {
+    name: "Brazilian Wax.",
+    tag: "Gentle beyond belief.",
+    price: "From $55",
+    image:
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop",
+    alt: "Calm spa setting with towels and candles",
+  },
+  {
+    name: "Lash Extensions.",
+    tag: "Full volume. Zero effort.",
+    price: "From $70",
+    image:
+      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1600&auto=format&fit=crop",
+    alt: "Close up of a client receiving eye makeup",
+  },
+  {
+    name: "Glam Makeup.",
+    tag: "Ready when you are.",
+    price: "From $70",
+    image:
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1600&auto=format&fit=crop",
+    alt: "Makeup brushes and palettes arranged on a table",
+  },
+];
+
+const values = [
+  {
+    icon: Sparkles,
+    title: "Hygiene, first.",
+    text: "Fresh linens and single use applicators for every client. No exceptions.",
+  },
+  {
+    icon: Clock,
+    title: "Private. Unhurried.",
+    text: "One client at a time in a private suite. Your appointment is yours alone.",
+  },
+  {
+    icon: Heart,
+    title: "Results that last.",
+    text: "Aftercare built into every visit, so smooth stays smooth between appointments.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="w-full bg-gradient-to-b from-[#fdf3ee] via-[#fbe9e2] to-[#f7d9d2] text-[#5a3b26]">
+      {/* Hero with scroll animation */}
+      <main>
+        <HeroScrollDemo />
+
+        {/* Services */}
+        <section id="services" className="px-6 py-24 md:py-32">
+          <h2 className="font-display text-center text-4xl font-semibold md:text-5xl">
+            The essentials.
+            <br />
+            <span className="text-[#b07c3f]">Done beautifully.</span>
+          </h2>
+          <div className="mx-auto mt-14 grid max-w-5xl gap-5 md:grid-cols-3">
+            {services.map((s) => (
+              <a
+                key={s.name}
+                href="/services"
+                className="group overflow-hidden rounded-[28px] bg-white/80 shadow-[0_8px_30px_rgba(122,74,34,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_rgba(122,74,34,0.18)]"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={s.image}
+                    alt={s.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-7">
+                  <h3 className="text-xl font-semibold">{s.name}</h3>
+                  <p className="mt-0.5 font-medium text-[#a3785a]">{s.tag}</p>
+                  <p className="mt-4 flex items-center justify-between text-sm">
+                    <span className="text-[#a3785a]">{s.price}</span>
+                    <span className="text-[#8a5a2b]">See pricing ›</span>
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Featured package: interactive peel card */}
+        <section id="featured" className="px-6 py-10 md:py-16">
+          <PagePeelDemo />
+        </section>
+
+        {/* Meet the owner */}
+        <section id="owner" className="px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-display text-4xl font-semibold md:text-5xl">
+              Meet the{" "}
+              <span className="font-script bg-gradient-to-r from-[#d8a75b] to-[#7d4e22] bg-clip-text pr-3 text-5xl text-transparent md:text-7xl">
+                Owner
+              </span>
+            </h2>
+            <div className="mt-10 rounded-[28px] bg-[#fbd9dd]/60 p-8 shadow-[0_8px_30px_rgba(122,74,34,0.08)] md:p-12">
+              <p className="text-lg leading-relaxed text-[#6b4a30]">
+                Hi there! I&apos;m Yariliz, a passionate waxer with five years
+                of experience and three years of running my own business. The
+                beauty industry has always had my heart, thanks to the amazing
+                women in my family who inspired me to do what I love. My goal
+                is to make every client feel confident, comfortable, and, of
+                course, silky smooth! I bring good vibes, lots of smiles, and a
+                touch of warmth to every appointment because beauty should be
+                fun and empowering. Can&apos;t wait to welcome you into my
+                space!
+              </p>
+              <p className="font-script mt-6 text-4xl text-[#8a5a2b]">
+                Yariliz
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Salon hours */}
+        <section id="hours" className="px-6 py-24 md:py-32">
+          <h2 className="font-display text-center text-4xl font-semibold tracking-[0.08em] md:text-5xl">
+            Salon Hours
+          </h2>
+          <div className="mx-auto mt-14 grid max-w-3xl gap-6 md:grid-cols-2">
+            <div className="rounded-[28px] bg-[#fbd9dd]/70 p-9 text-center shadow-[0_8px_30px_rgba(122,74,34,0.08)]">
+              <h3 className="font-display text-sm font-semibold tracking-[0.3em] text-[#8a5a2b]">
+                OPEN
+              </h3>
+              <p className="font-display mt-5 text-2xl font-semibold text-[#a0526b]">
+                Tues to Fri
+              </p>
+              <p className="mt-1 text-[#6b4a30]">12:00 pm to 8:30 pm</p>
+              <p className="font-display mt-5 text-2xl font-semibold text-[#a0526b]">
+                Saturday
+              </p>
+              <p className="mt-1 text-[#6b4a30]">9:00 am to 6:00 pm</p>
+            </div>
+            <div className="rounded-[28px] bg-[#fbd9dd]/70 p-9 text-center shadow-[0_8px_30px_rgba(122,74,34,0.08)]">
+              <h3 className="font-display text-sm font-semibold tracking-[0.3em] text-[#8a5a2b]">
+                CLOSED
+              </h3>
+              <p className="font-display mt-5 text-2xl font-semibold text-[#a0526b]">
+                Sunday
+              </p>
+              <p className="font-display mt-5 text-2xl font-semibold text-[#a0526b]">
+                Monday
+              </p>
+              <p className="mt-6 text-sm text-[#a3785a]">
+                Appointment only. Book online anytime.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Why */}
+        <section id="why" className="px-6 py-24 md:py-32">
+          <h2 className="font-display text-center text-4xl font-semibold md:text-5xl">
+            Why Excellence.
+          </h2>
+          <div className="mx-auto mt-14 grid max-w-4xl gap-12 text-center md:grid-cols-3">
+            {values.map((v) => (
+              <div key={v.title}>
+                <v.icon
+                  className="mx-auto mb-4 h-9 w-9 text-[#b07c3f]"
+                  strokeWidth={1.4}
+                  aria-hidden
+                />
+                <h3 className="text-lg font-semibold">{v.title}</h3>
+                <p className="mt-2 text-sm text-[#a3785a]">{v.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-gradient-to-b from-[#dd8fa8] via-[#bb547a] to-[#8a3055] px-6 py-28 text-center text-[#fdf3ee] md:py-36">
+          <h2 className="font-display text-4xl font-semibold md:text-6xl">
+            Your glow.
+            <br />
+            <span className="font-script bg-gradient-to-r from-[#e9c286] via-[#d8a75b] to-[#b07c3f] bg-clip-text pr-3 text-5xl text-transparent md:text-8xl">
+              one click away
+            </span>
+          </h2>
+          <p className="mt-5 text-[#fdf3ee]/70">
+            Appointments open online, around the clock.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="mt-9 inline-block rounded-full bg-[#d8a75b] px-8 py-3.5 text-lg text-[#3a2211] transition-colors hover:bg-[#e9c286]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Book an appointment
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
       </main>
+
+      {/* Footer — light blush to blend with the page rather than a dark bar */}
+      <footer className="bg-[#f7d9d2] px-6 py-10 text-xs text-[#6b4a30]">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 border-t border-[#e2bfb5] pt-6">
+          <p>
+            Copyright © {new Date().getFullYear()} Excellence Beauty Bar LLC.
+            All rights reserved.
+          </p>
+          <p>Saddle Brook, New Jersey</p>
+        </div>
+      </footer>
     </div>
   );
 }
