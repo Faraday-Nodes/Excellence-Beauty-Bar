@@ -11,9 +11,8 @@ const services = [
     name: "Brazilian Wax.",
     tag: "Gentle beyond belief.",
     price: "From $55",
-    image:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop",
-    alt: "Calm spa setting with towels and candles",
+    image: "/brazilian-wax.png",
+    alt: "Wax sticks and wax beads on a pink background",
   },
   {
     name: "Lash Extensions.",
