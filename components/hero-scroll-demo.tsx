@@ -9,15 +9,14 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <p className="font-display text-xl font-semibold tracking-[0.2em] text-[#a3785a] md:text-3xl">
-              EXCELLENCE BEAUTY BAR
-            </p>
-            <h1 className="font-display mt-3 text-4xl font-semibold text-[#5a3b26]">
-              Where beauty meets <br />
-              <span className="font-script mt-1 bg-gradient-to-r from-[#d8a75b] via-[#b07c3f] to-[#7d4e22] bg-clip-text pr-4 text-5xl font-normal leading-none text-transparent md:text-[7rem]">
-                excellence
-              </span>
+            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-[0.02em] text-[#5a3b26] sm:text-6xl md:text-8xl">
+              EXCELLENCE
+              <br />
+              BEAUTY BAR
             </h1>
+            <p className="font-script mx-auto mt-4 max-w-xl bg-gradient-to-r from-[#d8a75b] via-[#b07c3f] to-[#7d4e22] bg-clip-text pr-3 text-3xl leading-none text-transparent md:text-5xl">
+              where beauty meets excellence
+            </p>
             <p className="mx-auto mt-6 max-w-xl text-lg text-[#a3785a]">
               Waxing, skincare, lashes and glam. A private studio in Saddle
               Brook, New Jersey, designed around you.
