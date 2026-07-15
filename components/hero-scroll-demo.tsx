@@ -9,7 +9,7 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <p className="font-display text-base font-semibold tracking-[0.2em] text-[#a3785a]">
+            <p className="font-display text-xl font-semibold tracking-[0.2em] text-[#a3785a] md:text-3xl">
               EXCELLENCE BEAUTY BAR
             </p>
             <h1 className="font-display mt-3 text-4xl font-semibold text-[#5a3b26]">
