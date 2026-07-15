@@ -35,12 +35,16 @@ export const ContainerScroll = ({
   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <div className="relative h-[calc(100dvh+8rem)] md:h-[80rem]" ref={containerRef}>
+    <div className="relative h-[calc(100svh+8rem)] md:h-[80rem]" ref={containerRef}>
       {/* Sticky on mobile: the content rides pinned in view for the short
           scroll "runway" above (so the rotate/scale animation has room to
           play), then releases straight into the next section with no dead
-          gap. Desktop reverts to the original static, fully centered box. */}
-      <div className="sticky top-0 flex h-dvh items-start justify-center px-2 pb-2 pt-8 md:static md:h-full md:items-center md:p-20">
+          gap. Desktop reverts to the original static, fully centered box.
+          svh (not dvh) is deliberate: dvh tracks the browser chrome
+          live as it hides/shows mid-scroll, so the pinned box's own height
+          would grow and shrink while scrolling — svh stays fixed to the
+          smallest-chrome-visible viewport, so the pin never wobbles. */}
+      <div className="sticky top-0 flex h-svh items-start justify-center px-2 pb-2 pt-8 md:static md:h-full md:items-center md:p-20">
         <div
           className="py-4 md:py-40 w-full relative"
           style={{
