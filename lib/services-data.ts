@@ -20,9 +20,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     name: "Waxing",
     tagline: "Our signature. Smooth, head to toe.",
-    image:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop",
-    alt: "Calm spa setting with towels and candles",
+    image: "/brazilian-wax.png",
+    alt: "Wax sticks and wax beads on a pink background",
     services: [
       { name: "Brazilian Wax", dur: "30 min", price: 55, detail: "Bikini strip, top strip, lip strips and butt strip." },
       { name: "Full Bikini", dur: "30 min", price: 50, detail: "Bikini strip, top strip and upper thigh." },

@@ -27,7 +27,7 @@ export const ContainerScroll = ({
   }, []);
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
+    return isMobile ? [0.85, 1] : [1.05, 1];
   };
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
@@ -36,11 +36,11 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
+      className="h-[46rem] md:h-[80rem] flex items-start md:items-center justify-center relative px-2 pb-2 pt-8 md:p-20"
       ref={containerRef}
     >
       <div
-        className="py-10 md:py-40 w-full relative"
+        className="py-4 md:py-40 w-full relative"
         style={{
           perspective: "1000px",
         }}
@@ -91,7 +91,7 @@ export const Card = ({
         boxShadow:
           "0 0 #6b4f4400, 0 9px 20px #6b4f4426, 0 37px 37px #6b4f4421, 0 84px 50px #6b4f4413, 0 149px 60px #6b4f4405, 0 233px 65px #6b4f4402",
       }}
-      className="max-w-5xl -mt-12 mx-auto w-full border-4 border-[#f3cfc9] p-2 md:p-3 bg-[#fdf1ec] rounded-[30px]"
+      className="max-w-5xl -mt-6 md:-mt-12 mx-auto w-full border-4 border-[#f3cfc9] p-2 md:p-3 bg-[#fdf1ec] rounded-[30px]"
     >
       {/* No fixed height: the frame hugs whatever image it wraps, so there
           are no empty bars around it regardless of the image's aspect ratio. */}
