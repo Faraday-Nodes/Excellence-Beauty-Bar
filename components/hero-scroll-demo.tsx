@@ -2,6 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 export function HeroScrollDemo() {
   return (
@@ -38,7 +39,7 @@ export function HeroScrollDemo() {
         }
       >
         <Image
-          src="/meet-the-owner.png"
+          src={asset("/meet-the-owner.png")}
           alt="Meet the owner, Yariliz — a passionate waxer with five years of experience and three years running her own business, dedicated to making every client feel confident, comfortable and silky smooth."
           height={962}
           width={1635}

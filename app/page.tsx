@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Sparkles, Heart, Clock } from "lucide-react";
+import { asset } from "@/lib/utils";
 import { HeroScrollDemo } from "@/components/hero-scroll-demo";
 import { PagePeelDemo } from "@/components/ui/PagePeel";
 
@@ -72,7 +73,7 @@ export default function Home() {
               >
                 <div className="relative h-56 overflow-hidden">
                   <Image
-                    src={s.image}
+                    src={asset(s.image)}
                     alt={s.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SERVICE_CATEGORIES, BOOK_URL } from "@/lib/services-data";
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function ServicesPage() {
           >
             <div className="relative h-52">
               <Image
-                src={cat.image}
+                src={asset(cat.image)}
                 alt={cat.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
