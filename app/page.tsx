@@ -18,9 +18,8 @@ const services = [
     name: "Lash Extensions.",
     tag: "Full volume. Zero effort.",
     price: "From $70",
-    image:
-      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1600&auto=format&fit=crop",
-    alt: "Close up of a client receiving eye makeup",
+    image: "/lash-extensions.png",
+    alt: "Close up of a client's full-volume lash extensions",
   },
   {
     name: "Glam Makeup.",

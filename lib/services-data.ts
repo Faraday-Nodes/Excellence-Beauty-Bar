@@ -59,9 +59,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     name: "Lash Extensions",
     tagline: "Full volume. Zero effort.",
-    image:
-      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1600&auto=format&fit=crop",
-    alt: "Close up of a client receiving eye makeup",
+    image: "/lash-extensions.png",
+    alt: "Close up of a client's full-volume lash extensions",
     services: [
       { name: "Classic Lash Set", dur: "3 hr", price: 70, detail: "One extension per natural lash. An everyday, mascara like finish." },
       { name: "Hybrid Lash Set", dur: "3 hr", price: 80, detail: "A blend of classic and volume for texture with fullness." },
